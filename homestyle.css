@@ -69,7 +69,7 @@ body {
 span {
   color: aliceblue;
   text-decoration: none;
-  font-size: 1.1em;
+  font-size: 1em;
 }
 
 .titulos {
@@ -219,7 +219,7 @@ ul.nav {
 
 .article-main p {
   margin-bottom: 16px;
-  font-size: 1.35em;
+  font-size: 1.3em;
   line-height: 1.5em;
   text-overflow: ellipsis;
   text-wrap: wrap;
@@ -227,7 +227,7 @@ ul.nav {
 
 .list-ip li {
   margin-bottom: 8px;
-  font-size: 1.35em;
+  font-size: 1.3em;
 }
 
 .skills-container {
