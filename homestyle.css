@@ -324,85 +324,22 @@ ul.nav {
   margin-bottom: 16px;
   font-size: 1.3em;
   line-height: 1.5em;
-  text-overflow: ellipsis;
+  text-overflow: balance;
   text-wrap: wrap;
   color: #dddddd;
 }
 
-/*----------- querys ARTICULO -----------*/
 
-@media (max-width: 768px) {
-  article {
-    width: 100%;
-  }
-
-  .nav {
-    margin-left: 0;
-    width: 100%;
-  }
-
-  .nav a {
-    font-size: 1.1em;
-  }
-}
-
-@media (max-width: 1140px) {
-  article {
-    padding: 20px;
-    width: 90%;
-  }
-
-  .article-header {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .nav {
-    position: relative;
-    background-color: #161616;
-    box-shadow: 0 2px 12px #0004;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
-    gap: 10px;
-    margin: 0;
-
-    border-radius: 20px;
-    margin-bottom: 20px;
-    padding: 20px;
-    width: fit-content;
-  }
-
-  .section h2 {
-    margin: 0;
-    font-size: 2em;
-  }
-
-  .article-main p {
-    font-size: 1em;
-    font-weight: lighter;
-    color: #ebebeb;
-  }
-}
-
-/*----------- FIN DE ARTICULO -----------*/
 
 /*----------- SOBRE MI -----------*/
 
-.article-main p {
-  margin-bottom: 16px;
-  font-size: 1.3em;
-  line-height: 1.5em;
-  text-overflow: ellipsis;
-  text-wrap: wrap;
-}
+
 
 .list-ip li {
   margin-bottom: 8px;
   font-size: 1.3em;
+  font-weight: 500;
+  color: #ebebeb;
 }
 
 .skills-container {
@@ -564,3 +501,67 @@ input:focus-visible {
 }
 
 /*----------- CONTACTO FINAL -----------*/
+
+
+/*----------- querys ARTICULO -----------*/
+
+
+
+@media (max-width: 768px) {
+  article {
+    width: 100%;
+  }
+
+  .nav {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .nav a {
+    font-size: 1.1em;
+  }
+}
+
+@media (max-width: 1140px) {
+  article {
+    padding: 20px;
+    width: 90%;
+  }
+
+  .article-header {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav {
+    position: relative;
+    background-color: #161616;
+    box-shadow: 0 2px 12px #0004;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    gap: 10px;
+    margin: 0;
+
+    border-radius: 20px;
+    margin-bottom: 20px;
+    padding: 20px;
+    width: fit-content;
+  }
+
+  .section h2 {
+    margin: 0;
+    font-size: 2em;
+  }
+
+  .article-main p {
+    font-size: 1em;
+    font-weight: lighter;
+    color: #ebebeb;
+  }
+}
+
+/*----------- FIN DE ARTICULO -----------*/
