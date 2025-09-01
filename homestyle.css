@@ -59,8 +59,9 @@ body {
   border-radius: 20px;
 }
 
-.contact-toggle-btn{
-  display: none; 
+.contact-toggle-btn {
+  display: none;
+      margin: 50px 0 0 0;
 }
 
 .side-bar ul {
@@ -134,8 +135,14 @@ span {
 /*----------- querys sidebar -----------*/
 @media (max-width: 768px) {
   .side-bar {
-    position: static !important; 
+    position: static !important;
   }
+
+.contact-toggle-btn{
+  padding: 0;
+  margin-top: 0;
+}
+
 }
 @media (max-width: 1140px) {
   .side-bar {
@@ -159,7 +166,7 @@ span {
     margin-top: 12px;
     background: #242424;
     border-radius: 12px;
-    padding: 12px 0 0 0;
+    padding: 0;
   }
 
   /* Muestra la lista cuando tiene la clase 'show' */
@@ -178,13 +185,37 @@ span {
     font-size: 1em;
     font-weight: bold;
     cursor: pointer;
-    margin-bottom: 0;
     transition: background 0.2s;
     width: 50%;
     text-align: center;
   }
   .contact-toggle-btn:hover {
     background: #48e;
+  }
+
+  /* Animación para mostrar/ocultar la lista de contactos */
+  .side-bar ul {
+    transition: max-height 0.7s cubic-bezier(0.4, 0, 0.2, 1),
+      opacity 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+    display: flex; /* Mantener flex para animación */
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    margin-top: 12px;
+    background: #242424;
+    border-radius: 12px;
+    padding: 0;
+  }
+
+  .side-bar ul.show {
+    max-height: 500px; /* Suficiente para todos los items */
+    opacity: 1;
+    padding: 12px 0 0 0;
+    transition: max-height 0.8s cubic-bezier(0.4, 0, 0.2, 1),
+      opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1);
   }
 }
 
@@ -240,7 +271,6 @@ ul.nav {
   color: #48e;
 }
 
-
 .section {
   display: none;
   opacity: 0;
@@ -263,7 +293,6 @@ ul.nav {
     transform: translateY(0);
   }
 }
-
 
 .section-header {
   display: flex;
@@ -297,9 +326,8 @@ ul.nav {
   line-height: 1.5em;
   text-overflow: ellipsis;
   text-wrap: wrap;
-    color: #dddddd;
+  color: #dddddd;
 }
-
 
 /*----------- querys ARTICULO -----------*/
 
@@ -307,8 +335,16 @@ ul.nav {
   article {
     width: 100%;
   }
-}
 
+  .nav {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .nav a {
+    font-size: 1.1em;
+  }
+}
 
 @media (max-width: 1140px) {
   article {
@@ -317,37 +353,39 @@ ul.nav {
   }
 
   .article-header {
+    display: flex;
+    justify-content: center;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
   }
 
   .nav {
     position: relative;
-    background-color: transparent;
-    justify-content: center;
     background-color: #161616;
     box-shadow: 0 2px 12px #0004;
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: space-around;
     gap: 10px;
     margin: 0;
+
     border-radius: 20px;
     margin-bottom: 20px;
     padding: 20px;
+    width: fit-content;
   }
 
-.section h2 {
-  margin: 0;
-  font-size: 2em;
-}
+  .section h2 {
+    margin: 0;
+    font-size: 2em;
+  }
 
-.article-main p {
-  font-size: 1em;
-  font-weight: lighter;
-  color: #ebebeb;
-}
-
+  .article-main p {
+    font-size: 1em;
+    font-weight: lighter;
+    color: #ebebeb;
+  }
 }
 
 /*----------- FIN DE ARTICULO -----------*/
@@ -467,8 +505,6 @@ ul.nav {
   display: block;
   margin-top: 4px;
 }
-
-
 
 /*----------- RESUMEN FINAL -----------*/
 

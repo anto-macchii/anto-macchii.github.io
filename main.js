@@ -8,5 +8,9 @@ window.onload = () => showSection('about');
 
 function toggleContacts() {
   const contactList = document.getElementById('contact-list');
-  contactList.classList.toggle('show');
+  if (contactList.classList.contains('show')) {
+    contactList.classList.remove('show');
+  } else {
+    contactList.classList.add('show');
+  }
 }
