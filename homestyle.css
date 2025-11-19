@@ -106,31 +106,7 @@ span {
   border-radius: 15px;
 }
 
-/* Cambia el color de los iconos SVG al pasar el mouse por el li o el enlace */
-.side-bar li:hover .icon img,
-.side-bar a:hover ~ .icon img,
-.side-bar a:hover .icon img {
-  animation: colorChange 0.3s forwards;
-  /* Este filtro aproxima el color #48e */
-  transition: filter 0.3s ease-in-out;
-}
 
-@keyframes colorChange {
-  0% {
-    filter: invert(47%) sepia(98%) saturate(7496%) hue-rotate(217deg)
-      brightness(102%) contrast(101%);
-  }
-  100% {
-    filter: invert(47%) sepia(98%) saturate(7496%) hue-rotate(217deg)
-      brightness(102%) contrast(101%);
-  }
-}
-
-.side-bar li:hover .icon img {
-  filter: brightness(0) saturate(100%) invert(47%) sepia(98%) saturate(7496%)
-    hue-rotate(217deg);
-  transition: filter 0.3s;
-}
 
 /*----------- querys sidebar -----------*/
 @media (max-width: 768px) {
@@ -230,7 +206,7 @@ article {
   padding-top: 20px;
   flex: 1;
   margin: 0 12px 75px;
-  position: relative; /* Añadido para referencia absoluta interna */
+  position: relative; 
   box-shadow: 0 0 30px 0 #000002a6;
 }
 
@@ -285,7 +261,7 @@ ul.nav-list {
 @keyframes fadeIn {
   from {
     opacity: 0;
-    transform: translateY(30px);
+    transform: translateY(10px);
   }
   to {
     opacity: 1;
@@ -437,7 +413,7 @@ ul.nav-list {
   display: flex;
   flex-direction: column;
   gap: 40px;
-  margin-top: 32px;
+  margin-top: 10px;
 }
 
 /* Timeline block (Educación, Experiencia) */
